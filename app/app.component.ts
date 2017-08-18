@@ -9,7 +9,7 @@ import { Animal } from './animal.model';
       <h1>Zoo Tracker</h1>
       <h3>{{subtitle}}</h3>
     </div>
-    
+    <animal-list [childAnimalList]="masterAnimalList"></animal-list>
 
   </div>
   `
