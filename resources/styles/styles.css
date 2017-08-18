@@ -1,1 +1,10 @@
+body {
+  background-image: url('http://www.sfzoo.org/about/img/_dsc7364-2-10-12-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.jumbotron {
+  text-align: center;
+}

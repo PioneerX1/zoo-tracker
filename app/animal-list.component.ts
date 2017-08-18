@@ -13,7 +13,7 @@ import { Animal } from './animal.model';
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let currentAnimal of childAnimalList | age: filterByAge">
       <h4>{{currentAnimal.name}}   <em>| {{currentAnimal.species}}</em></h4>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit Animal</button>
+      <button class="btn btn-info" (click)="editButtonHasBeenClicked(currentAnimal)">Edit Animal</button>
     </li>
   </ul>
   `
