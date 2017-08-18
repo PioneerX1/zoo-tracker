@@ -9,7 +9,9 @@ import { Animal } from './animal.model';
       <h1>Zoo Tracker</h1>
       <h3>{{subtitle}}</h3>
     </div>
-    <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+    <hr>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
 
   </div>
   `
@@ -24,5 +26,14 @@ export class AppComponent {
     new Animal('Kobe', 'Koala', 8, 'eucalyptus leaves', 'Tree Zone', 4, 'Female', 'sleeping, hanging out, and eating the face off a human', 'people who cannot mind their own business cause she keeps it real')
   ];
 
+  selectedAnimal: Animal = null;
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 
 }
